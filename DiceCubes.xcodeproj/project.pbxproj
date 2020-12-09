@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D24FF5C23FD353900A24A00 /* Build configuration list for PBXProject "DiceCubes_firtsversion" */;
+			buildConfigurationList = 4D24FF5C23FD353900A24A00 /* Build configuration list for PBXProject "DiceCubes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -357,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D24FF5C23FD353900A24A00 /* Build configuration list for PBXProject "DiceCubes_firtsversion" */ = {
+		4D24FF5C23FD353900A24A00 /* Build configuration list for PBXProject "DiceCubes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D24FF7323FD354000A24A00 /* Debug */,

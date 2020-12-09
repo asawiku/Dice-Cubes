@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -30,22 +35,10 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                                 <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tap anywhere to roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ft-v3-SYq">
-                                <rect key="frame" x="104.5" y="803" width="205" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tap or shake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ft-v3-SYq">
+                                <rect key="frame" x="127.5" y="783.5" width="159" height="33.5"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="28"/>
                                 <color key="textColor" red="0.50196078431372548" green="0.50199025870000002" blue="0.50189822910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="28"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="32"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QS-mK-a0D">
-                                <rect key="frame" x="164.5" y="74" width="85" height="45.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="28"/>
@@ -57,15 +50,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3ft-v3-SYq" secondAttribute="bottom" constant="30" id="2KR-Xf-9nq">
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3ft-v3-SYq" secondAttribute="bottom" constant="45" id="2KR-Xf-9nq">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="20"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                             </constraint>
                             <constraint firstItem="QyF-M1-qAT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CfR-Yd-MfX"/>
                             <constraint firstItem="QyF-M1-qAT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dsa-vR-n0D"/>
-                            <constraint firstItem="2QS-mK-a0D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HIi-lP-1fj"/>
-                            <constraint firstItem="2QS-mK-a0D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="XGW-86-PIr"/>
                             <constraint firstItem="3ft-v3-SYq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iJc-Jb-tcn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,7 +66,6 @@
                         <outlet property="hintLabel" destination="3ft-v3-SYq" id="0Kr-eg-k4S"/>
                         <outlet property="leftImage" destination="k6S-OE-Goq" id="Tmv-NR-X8M"/>
                         <outlet property="rightImage" destination="Vd9-di-4NN" id="HPE-wg-e84"/>
-                        <outlet property="totalLabel" destination="2QS-mK-a0D" id="ieS-PF-ehZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

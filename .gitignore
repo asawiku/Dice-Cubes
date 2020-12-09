@@ -2,10 +2,12 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+##My folders with random icons and screenshots
+MyOwnStuff
+
 ## User settings
 xcuserdata/
 .DS_Store
-MyOwnStuff
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint

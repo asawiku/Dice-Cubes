@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var hintLabel: UILabel!
     
-    @IBOutlet weak var totalLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,18 +27,37 @@ class ViewController: UIViewController {
     
     override func touchesBegan (_ touches: Set<UITouch>, with event: UIEvent?) {
             self.diceRolling()
-
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-           
             self.diceRolling()
-            
         }
     
     func diceRolling() {
-    
+          
+        var milliseconds:Float = 8
             
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: 0.15, repeats: true) {
+                timer in
+                
+                let leftNumber = Int.random(in: 1...6)
+                let rightNumber = Int.random(in: 1...6)
+                                 
+                self.leftImage.image = UIImage(named: "Dice\(leftNumber)")
+                self.rightImage.image = UIImage(named: "Dice\(rightNumber)")
+                milliseconds = milliseconds - 1
+                    
+                if milliseconds <= 0 {
+                
+                    self.hintLabel.text = "\(leftNumber + rightNumber)"
+                    timer.invalidate()
+                    }
+                
+                }
+                // Fallback on earlier versions
+            
+            } else {
                 
                 let leftNumber = Int.random(in: 1...6)
                 let rightNumber = Int.random(in: 1...6)
@@ -48,18 +65,8 @@ class ViewController: UIViewController {
                 self.leftImage.image = UIImage(named: "Dice\(leftNumber)")
                 self.rightImage.image = UIImage(named: "Dice\(rightNumber)")
     
-                self.totalLabel.text = "Total: \(leftNumber + rightNumber)"
+                self.hintLabel.text = "\(leftNumber + rightNumber)"
                     
                 }
          }
-
-/*
- func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-         shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-   // Do not begin the pan until the swipe fails.
-   if gestureRecognizer == self.swipeGesture &&
-          otherGestureRecognizer == self.panGesture {
-      return true
-   }
-   return false
-} */
+}

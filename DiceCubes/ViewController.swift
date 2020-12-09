@@ -26,31 +26,22 @@ class ViewController: UIViewController {
     // Tapping on the screen
     
     override func touchesBegan (_ touches: Set<UITouch>, with event: UIEvent?) {
-        if #available(iOS 10.0, *) {
+
             // Haptic feedback
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.prepare()
             self.diceRolling()
             generator.impactOccurred()
-        } else {
-            // Fallback on earlier versions
-            self.diceRolling()
-        }
     }
     
     // Shake gesture
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        if #available(iOS 10.0, *) {
             //Haptic feedback
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.prepare()
             self.diceRolling()
             generator.impactOccurred()
-        } else {
-            // Fallback on earlier versions
-            self.diceRolling()
-        }
     }
     
     // Dice rolling function
